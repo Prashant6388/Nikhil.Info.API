@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.SelfHost;
 
 namespace InventoryManagement.Console.API
@@ -13,6 +14,8 @@ namespace InventoryManagement.Console.API
         static void Main(string[] args)
         {
             var config = new HttpSelfHostConfiguration("http://localhost:7500");
+            EnableCorsAttribute cors = new EnableCorsAttribute("http://localhost:4200", "*", "GET,POST");
+            config.EnableCors(cors);
 
             //config.Routes.MapHttpRoute(
             //    "API Default", "api/{controller}/{id}",
