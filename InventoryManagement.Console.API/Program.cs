@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json.Serialization;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Formatting;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
@@ -21,6 +23,10 @@ namespace InventoryManagement.Console.API
             //    "API Default", "api/{controller}/{id}",
             //    new { id = RouteParameter.Optional });
             config.MapHttpAttributeRoutes();
+
+            var jsonFormatter = config.Formatters.OfType<JsonMediaTypeFormatter>().First();
+            jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+
             using (HttpSelfHostServer server = new HttpSelfHostServer(config))
             {
                 server.OpenAsync().Wait();

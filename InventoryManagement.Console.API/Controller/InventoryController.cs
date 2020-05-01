@@ -23,7 +23,27 @@ namespace InventoryManagement.Console.API.Controller
             try
             {
                 DataTable dt = Common.Extension.GetDataTableFromExcel("Asset");
-                List<Asset> assetList = dt.DataTableToList<Asset>();              
+                List<Asset> assetList = dt.DataTableToList<Asset>();  
+                string loggedInUser = "", computerName="", operatingSystem="", ipAddress = "";
+
+                foreach (var item in assetList)
+                {
+                    if(!(string.IsNullOrEmpty(item.LoggedInUser) && string.IsNullOrEmpty(item.ComputerName) 
+                        && string.IsNullOrEmpty(item.OperatingSystem) && string.IsNullOrEmpty(item.IPAddress)))
+                    {
+                        loggedInUser = item.LoggedInUser;
+                        computerName = item.ComputerName;
+                        operatingSystem = item.OperatingSystem;
+                        ipAddress = item.IPAddress;
+                    }
+                    else
+                    {
+                        item.LoggedInUser = loggedInUser;
+                        item.ComputerName = computerName;
+                        item.OperatingSystem = operatingSystem;
+                        item.IPAddress = ipAddress;
+                    }
+                }
                 return Request.CreateResponse(HttpStatusCode.OK, assetList);
             }
             catch(Exception ex)
