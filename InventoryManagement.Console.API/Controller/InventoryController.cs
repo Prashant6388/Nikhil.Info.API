@@ -15,12 +15,12 @@ namespace InventoryManagement.Console.API.Controller
     [RoutePrefix("api/inventory")]
     public class InventoryController : ApiController
     {
+       
         [HttpGet]
         [Route("getassets")]
         public HttpResponseMessage GetAllAssets()
-        {
-          
-            try
+        {         
+             try
             {
                 DataTable dt = Common.Extension.GetDataTableFromExcel("Asset");
                 List<Asset> assetList = dt.DataTableToList<Asset>();  

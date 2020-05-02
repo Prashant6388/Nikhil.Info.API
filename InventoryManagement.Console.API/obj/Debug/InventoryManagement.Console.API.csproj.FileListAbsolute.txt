@@ -39,3 +39,4 @@ D:\Nikhil_Freelancer\Info.API\InventoryManagement.Console.API\obj\Debug\Inventor
 D:\Nikhil_Freelancer\Info.API\InventoryManagement.Console.API\bin\Debug\System.Web.Cors.dll
 D:\Nikhil_Freelancer\Info.API\InventoryManagement.Console.API\bin\Debug\System.Web.Http.Cors.dll
 D:\Nikhil_Freelancer\Info.API\InventoryManagement.Console.API\bin\Debug\System.Web.Http.Cors.xml
+D:\Nikhil_Freelancer\Info.API\InventoryManagement.Console.API\bin\Debug\DB\InventoryConfigurationDB.accdb

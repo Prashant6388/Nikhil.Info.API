@@ -46,12 +46,13 @@ namespace InventoryManagement.Console.API.Controller
 
                 int row = sheet.Dimension.End.Row + 1;
                 sheet.Cells[row, 1].Value = 3;
-                sheet.Cells[row, 2].Value = "Prashant PG";
+                sheet.Cells[row, 2].Value = "Prashant PGGFDGFDGFD";
                 sheet.Cells[row, 3].Value = "Prashant@gmail.com";
                 sheet.Cells[row, 4].Value = "1234";
-                //package.SaveAs(new FileInfo(@"DB\InventoryDB1.xlsx"));
-                Byte[] bin = package.GetAsByteArray();
-                File.WriteAllBytes(@"DB\InventoryDB.xlsx", bin);
+                package.Save();
+                ////package.SaveAs(new FileInfo(@"DB\InventoryDB1.xlsx"));
+                //Byte[] bin = package.GetAsByteArray();
+                //File.WriteAllBytes(@"DB\InventoryDB.xlsx", bin);
 
             }
               
