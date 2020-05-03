@@ -8,11 +8,25 @@ namespace InventoryManagement.Console.API.Model
 {
     public class User
     {
-        public int ID { get; set; }
-        public string UserName { get; set; }
-        public string UserEmail { get; set; }
-        public string UserPassword { get; set; }
-        public string UserContact{ get; set; }
-        public bool Active { get; set; }
+        public string ID { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public string ContactNo{ get; set; }
+    }
+
+    public class LoginRequest
+    {       
+        public string Email { get; set; }        
+        public string Password { get; set; }       
+    }
+
+    public class UserRequest
+    {
+        public string ID { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public string ContactNo { get; set; }
     }
 }

@@ -49,10 +49,7 @@ namespace InventoryManagement.Console.API.Controller
                 sheet.Cells[row, 2].Value = "Prashant PGGFDGFDGFD";
                 sheet.Cells[row, 3].Value = "Prashant@gmail.com";
                 sheet.Cells[row, 4].Value = "1234";
-                package.Save();
-                ////package.SaveAs(new FileInfo(@"DB\InventoryDB1.xlsx"));
-                //Byte[] bin = package.GetAsByteArray();
-                //File.WriteAllBytes(@"DB\InventoryDB.xlsx", bin);
+                package.Save();         
 
             }
               
