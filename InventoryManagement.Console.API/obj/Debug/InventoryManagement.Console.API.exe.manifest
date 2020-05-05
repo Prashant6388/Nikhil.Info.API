@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="InventoryManagement.Console.API.exe" size="22000">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="InventoryManagement.Console.API.exe" size="27120">
       <assemblyIdentity name="InventoryManagement.Console.API" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Auk0YWq6h76+tYkGJDGjbrIneNk/HPcnU6BexPmhUvc=</dsig:DigestValue>
+        <dsig:DigestValue>N4CtF6qemJZupDEYPm9JIOHJoh11UQT/5yL49UyAXe8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -16,7 +16,7 @@ namespace InventoryManagement.Console.API
         static void Main(string[] args)
         {
             var config = new HttpSelfHostConfiguration("http://localhost:7500");
-            EnableCorsAttribute cors = new EnableCorsAttribute("http://localhost:4200", "*", "GET,POST");
+            EnableCorsAttribute cors = new EnableCorsAttribute("http://localhost:4200", "*", "GET,POST,DELETE");
             config.EnableCors(cors);
 
             //config.Routes.MapHttpRoute(

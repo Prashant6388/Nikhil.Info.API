@@ -29,4 +29,9 @@ namespace InventoryManagement.Console.API.Model
         public string Password { get; set; }
         public string ContactNo { get; set; }
     }
+    public class EmailRequest
+    {
+        public string FileArray { get; set; }
+        public string FileName { get; set; }
+    }
 }

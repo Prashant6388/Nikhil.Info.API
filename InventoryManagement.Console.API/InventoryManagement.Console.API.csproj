@@ -103,6 +103,7 @@
     <Compile Include="Controller\ProductController.cs" />
     <Compile Include="Model\ApplicationSecurity.cs" />
     <Compile Include="Model\Asset.cs" />
+    <Compile Include="Model\EndPoint.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\PTNetworkService.cs" />
     <Compile Include="Model\User.cs" />
@@ -116,7 +117,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="DB\InventoryDB.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
