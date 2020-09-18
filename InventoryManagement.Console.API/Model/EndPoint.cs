@@ -21,5 +21,6 @@ namespace InventoryManagement.Console.API.Model
         public int TotalCount { get; set; }
         public int AvailableCount { get; set; }
         public int AvailableCountPer { get; set; }
+        public string TitleCount { get; set; }
     }
 }
